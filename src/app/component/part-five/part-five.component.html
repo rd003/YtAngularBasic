@@ -1,0 +1,36 @@
+<div class="main">
+   <div class="innerDiv">
+
+       <div class="dataDiv">
+        <h2>Students</h2>
+        <table class="tbl">
+            <thead>
+            <tr>
+              <th>#No</th>
+              <th>Name</th>
+              <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let student of students;index as i">
+                <td>{{i+1}}</td>
+                <td>{{student.name}}</td>
+                <td>
+                  <button class="btn" type="button" (click)="onSelectingStudent(student)">Detail</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+       </div>
+
+       <div class="detailDiv">
+        <app-student-detail [data]="selectedStuent"></app-student-detail>
+       </div>
+   </div>
+
+
+</div>
+
+
+
+

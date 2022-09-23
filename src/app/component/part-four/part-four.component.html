@@ -1,0 +1,34 @@
+<div [class]="classes" [hidden]="hidden">
+    Hello everyone
+    <br/>
+    <br/>
+    <button type="button" [disabled]="disable">Click me</button>
+</div>
+
+<div *ngIf="display">
+    <h2> Hello , I am from the if block</h2>
+   
+</div>
+
+<div>
+    <!-- ng for section -->
+    <br/>
+    <ul>
+        <li *ngFor="let name of names">
+            {{name}}
+        </li>
+    </ul>
+</div>
+
+
+<div>
+    <!-- ng switch section -->
+    <br/>
+    <div [ngSwitch]="number">
+        <div *ngSwitchCase="1">One</div>
+        <div *ngSwitchCase="2">Two</div>
+        <div *ngSwitchCase="3">Three</div>
+        <div *ngSwitchDefault="">Default</div>
+    </div>
+</div>
+

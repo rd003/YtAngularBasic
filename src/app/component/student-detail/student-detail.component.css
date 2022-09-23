@@ -1,0 +1,25 @@
+
+h2,h3{
+    color:#ba0059;
+}
+  .tblDetail{
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .tblDetail td, .tblDetail th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    color: white;
+
+  }
+  .tblDetail td{
+    background-color: #bd0060;
+  }
+  .tblDetail th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #3e363a;
+    width: 50%;
+  }  

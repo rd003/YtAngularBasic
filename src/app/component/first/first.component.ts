@@ -15,8 +15,6 @@ export class FirstComponent implements OnInit {
      this.isHidden=!this.isHidden;
   }
 
-
-
   constructor() { }
 
   ngOnInit(): void {
