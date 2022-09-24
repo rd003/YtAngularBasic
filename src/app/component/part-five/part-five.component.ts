@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Student } from 'src/app/models/student';
+import { StudentService } from 'src/app/services/student.service';
 
 @Component({
   selector: 'app-part-five',
@@ -7,18 +8,25 @@ import { Student } from 'src/app/models/student';
   styleUrls: ['./part-five.component.css']
 })
 export class PartFiveComponent implements OnInit {
-  constructor() { }
-  ngOnInit(): void {
+
+  students!:Student[];
+  selectedStuent!:Student;
+
+  constructor(private studentService:StudentService) { }
+
+  private getStudents(){
+    this.studentService.getStudents().subscribe({
+      next:(data)=>{
+            this.students=data;
+      },
+      error:(err)=>console.log(err)
+    })
   }
 
-  students:Student[]= [
-    {id:2,name:'john',age:16},
-    {id:2,name:'max',age:14},
-    {id:3,name:'mike',age:15},
-    {id:4,name:'jason',age:14},
-  ]
+  ngOnInit(): void {
+    this.getStudents();
+  }
 
-  selectedStuent!:Student;
 
   onSelectingStudent(data:Student){
    this.selectedStuent=data;

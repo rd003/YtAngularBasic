@@ -8,6 +8,7 @@ import {FormsModule} from '@angular/forms';
 import { PartFourComponent } from './component/part-four/part-four.component';
 import { PartFiveComponent } from './component/part-five/part-five.component';
 import { StudentDetailComponent } from './component/student-detail/student-detail.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { StudentDetailComponent } from './component/student-detail/student-detai
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

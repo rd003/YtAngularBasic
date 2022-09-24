@@ -1,0 +1,25 @@
+  /* nav css credit: w3schools.com */
+
+  .myNav {
+    background-color: rgba(30, 30, 30, 0.826);
+    overflow: hidden;
+  }
+  
+  .myNav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .myNav a:hover {
+    background-color: #c9357c;
+    color: black;
+  }
+  
+  .myNav a.active {
+    background-color: #ba0059;
+    color: white;
+  }
