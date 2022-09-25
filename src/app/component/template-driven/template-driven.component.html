@@ -1,0 +1,29 @@
+<div class="mainDiv">
+    <h2>Template  Driven Form Example</h2>
+    <form #studentForm="ngForm" (ngSubmit)="onPost()">
+        <label for="id">Id *</label>
+        <input type="text" name="id" #id="ngModel" required [(ngModel)]="student.id">
+        <div class="error" *ngIf="id.invalid && (id.touched || id.dirty)">
+             Id is required 
+        </div>
+
+        <label for="name">Name *</label>
+        <input type="text" name="name" #name="ngModel" required [(ngModel)]="student.name">
+        <div class="error" *ngIf="name.invalid && (name.touched || name.dirty)">
+             Name is required 
+        </div>
+
+        <label for="name">Age *</label>
+        <input type="text" name="age" #age="ngModel" required [(ngModel)]="student.age">
+        <div class="error" *ngIf="age.invalid && (age.touched || age.dirty)">
+             Age is required 
+        </div>
+
+        <input type="submit" [disabled]="studentForm.invalid" value="Submit">
+
+    </form>
+
+    <div style="margin-top:10%" *ngIf="isSubmitted">
+         {{student | json}}
+    </div>
+</div>

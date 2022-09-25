@@ -1,0 +1,37 @@
+<div class="mainDiv" >
+    <h2>Reactive Form Example</h2>
+    <form [formGroup]="studentForm" (ngSubmit)="onPost()">
+        <label for="id">Id *</label>
+        <input type="text" name="id" formControlName="id">
+        <div *ngIf="f['id'].invalid && (f['id'].touched || f['id'].dirty)" >
+              <div class="error" *ngIf="f['id'].errors?.['required']">
+                Id is required
+              </div>
+        </div>
+
+      
+        <label for="id">Name *</label>
+        <input type="text"  formControlName="name">
+        <div *ngIf="f['name'].invalid && (f['name'].touched || f['name'].dirty)" >
+              <div class="error" *ngIf="f['name'].errors?.['required']">
+                Name is required
+              </div>
+        </div>
+
+
+        <label for="id">Age *</label>
+        <input type="text"  formControlName="age">
+        <div *ngIf="f['age'].invalid && (f['age'].touched || f['age'].dirty)" >
+              <div class="error" *ngIf="f['age'].errors?.['required']">
+                Age is required
+              </div>
+        </div>
+
+        <input type="submit" [disabled]="studentForm.invalid" value="Submit">
+
+    </form>
+
+    <div style="margin-top:10%" *ngIf="isSubmitted">
+         {{studentForm.value | json}}
+    </div>
+</div>
