@@ -11,6 +11,7 @@ import { StudentDetailComponent } from './component/student-detail/student-detai
 import {HttpClientModule} from '@angular/common/http';
 import { TemplateDrivenComponent } from './component/template-driven/template-driven.component';
 import { ReactiveFormComponent } from './component/reactive-form/reactive-form.component';
+import { ToDoComponent } from './component/to-do/to-do.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ReactiveFormComponent } from './component/reactive-form/reactive-form.c
     PartFiveComponent,
     StudentDetailComponent,
     TemplateDrivenComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    ToDoComponent
   ],
   imports: [
     BrowserModule,

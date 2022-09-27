@@ -5,6 +5,7 @@ import { PartFiveComponent } from './component/part-five/part-five.component';
 import { PartFourComponent } from './component/part-four/part-four.component';
 import { ReactiveFormComponent } from './component/reactive-form/reactive-form.component';
 import { TemplateDrivenComponent } from './component/template-driven/template-driven.component';
+import { ToDoComponent } from './component/to-do/to-do.component';
 
 const routes: Routes = [
   {path:'student',component:PartFiveComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path:'fourth',component:PartFourComponent},
   {path:'template-driven',component:TemplateDrivenComponent},
   {path:'reactive-form',component:ReactiveFormComponent},
+  {path:'todo',component:ToDoComponent},
   {path:'',redirectTo:'/student',pathMatch:'full'}
 ]
 

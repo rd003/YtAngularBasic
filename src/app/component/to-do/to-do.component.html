@@ -1,0 +1,39 @@
+<div style="width: 70%;margin:auto">
+    <h2>Add To Do</h2>
+    <form (ngSubmit)="save()">
+    <div class="row r">
+      <div class="col-md-9">
+         <input type="text" [(ngModel)]="txtTodo" class="form-control" name="task">
+      </div>
+
+      <div class="col-md-3">
+           <button type="submit" class="btn btn-info">Save</button>
+      </div>
+    </div>
+   </form>
+    <h2>Todo List</h2>
+    <div class="row r">
+        <div class="col-md-12">
+            <table class="table table-bordered">
+                <thead>
+                   <tr>
+                    <th>&nbsp;</th>
+                    <th>Todos</th>
+                    <th>Action</th>
+                   </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let todo of toDos">
+                        <td>
+                            <input type="checkbox" (change)="updateTaskCompletion(todo)" [value]="todo.isChecked" [(ngModel)]="todo.isChecked">
+                        </td>
+                        <td> <span [class.line]="todo.isChecked"> {{todo.item}} </span></td>
+                        <td>
+                            <button type="button" (click)="delete(todo.id)" class="btn btn-danger"> X </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
